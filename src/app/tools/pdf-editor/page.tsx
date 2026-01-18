@@ -205,7 +205,8 @@ export default function PDFEditorPage() {
       
       // Save the modified PDF
       const modifiedPdfBytes = await modifiedPdfDoc.save();
-      const blob = new Blob([modifiedPdfBytes], { type: 'application/pdf' });
+      const pdfBlobBytes = new Uint8Array(modifiedPdfBytes);
+      const blob = new Blob([pdfBlobBytes], { type: "application/pdf" });
       const url = URL.createObjectURL(blob);
       
       // Update preview
@@ -311,7 +312,11 @@ export default function PDFEditorPage() {
       
       // Save rotated PDF
       const rotatedPdfBytes = await rotatedPdfDoc.save();
-      const blob = new Blob([rotatedPdfBytes], { type: 'application/pdf' });
+      const rotatedBlobBytes: Uint8Array = Uint8Array.from(rotatedPdfBytes);
+      const arrayBuffer = rotatedPdfBytes.buffer.slice(0) as ArrayBuffer;
+      const blob = new Blob([arrayBuffer], { type: "application/pdf" });
+
+
       const url = URL.createObjectURL(blob);
       
       setPdfPreviewUrl(url);
@@ -366,7 +371,9 @@ export default function PDFEditorPage() {
       
       // Save PDF
       const pdfBytes = await pdfDoc.save();
-      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const pdfArrayBuffer = pdfBytes.buffer.slice(0) as ArrayBuffer;
+      const blob = new Blob([pdfArrayBuffer], { type: "application/pdf" });
+
       const url = URL.createObjectURL(blob);
       const file = new File([blob], 'blank_document.pdf', { type: 'application/pdf' });
       
