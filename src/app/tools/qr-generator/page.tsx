@@ -128,7 +128,7 @@ export default function QRGeneratorPage() {
                         <img
                           src={qrImageUrl}
                           alt="Generated QR Code"
-                          style={{ width: 320, height: 320, maxWidth: '100%', height: 'auto' }}
+                          style={{ width: 320, height: 320, maxWidth: "100%" }}
                           className="rounded max-w-full h-auto"
                           onLoad={() => setIsGenerating(false)}
                         />
