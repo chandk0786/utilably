@@ -683,10 +683,10 @@ export default function CodeGenerator() {
       <div className="max-w-7xl mx-auto px-4 py-8">
         {/* Header with AI Badge */}
         <div className="text-center mb-10">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-purple-600 via-pink-600 to-blue-600 rounded-2xl mb-4 relative">
+          <div className="inline-flex items-center justify-center w-20 h-20 bg-linear-to-br from-purple-600 via-pink-600 to-blue-600 rounded-2xl mb-4 relative">
             <Code2 className="w-10 h-10 text-white" />
             <div className="absolute -top-2 -right-2">
-              <div className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
+              <div className="bg-linear-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-3 py-1 rounded-full flex items-center gap-1">
                 <Sparkles className="w-3 h-3" />
                 AI-Powered
               </div>
@@ -703,7 +703,7 @@ export default function CodeGenerator() {
           <div className="mt-6 flex items-center justify-center gap-4">
             <div className="flex items-center gap-2">
               <div className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${aiModeEnabled
-                  ? "bg-gradient-to-r from-purple-600 to-blue-600"
+                  ? "bg-linear-to-r from-purple-600 to-blue-600"
                   : "bg-gray-300 dark:bg-gray-700"
                 }`}
               >
@@ -726,7 +726,7 @@ export default function CodeGenerator() {
                 <button
                   onClick={() => setActiveAITab('generator')}
                   className={`px-4 py-2 rounded-lg text-sm font-medium ${activeAITab === 'generator'
-                      ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                      ? "bg-linear-to-r from-purple-600 to-blue-600 text-white"
                       : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
                     }`}
                 >
@@ -735,7 +735,7 @@ export default function CodeGenerator() {
                 <button
                   onClick={() => setActiveAITab('chat')}
                   className={`px-4 py-2 rounded-lg text-sm font-medium ${activeAITab === 'chat'
-                      ? "bg-gradient-to-r from-purple-600 to-blue-600 text-white"
+                      ? "bg-linear-to-r from-purple-600 to-blue-600 text-white"
                       : "bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300"
                     }`}
                 >
@@ -749,7 +749,7 @@ export default function CodeGenerator() {
         {/* Main Content */}
         {aiModeEnabled && activeAITab === 'chat' ? (
           // AI Chat Interface
-          <div className="bg-gradient-to-br from-gray-900 to-black rounded-2xl border border-gray-800 overflow-hidden">
+          <div className="bg-linear-to-br from-gray-900 to-black rounded-2xl border border-gray-800 overflow-hidden">
             <AIChat />
           </div>
         ) : aiModeEnabled ? (
@@ -992,7 +992,7 @@ export default function CodeGenerator() {
                   </p>
                 </div>
                 
-                <div className="max-h-[400px] overflow-y-auto p-2">
+                <div className="max-h-100 overflow-y-auto p-2">
                   {filteredTemplates.length === 0 ? (
                     <div className="text-center py-8">
                       <Code2 className="w-12 h-12 text-gray-400 mx-auto mb-3" />
@@ -1278,7 +1278,7 @@ export default function CodeGenerator() {
                   </div>
                   
                   {/* Code Display */}
-                  <div className="p-4 max-h-[500px] overflow-auto">
+                  <div className="p-4 max-h-125 overflow-auto">
                     <SyntaxHighlighter
                       language={selectedTemplate.language}
                       style={vscDarkPlus}
@@ -1346,7 +1346,7 @@ export default function CodeGenerator() {
                       {/* AI Enhance Button */}
                       <button
                         onClick={handleAIGenerate}
-                        className="px-4 py-2 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg flex items-center gap-2"
+                        className="px-4 py-2 bg-linear-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white rounded-lg flex items-center gap-2"
                         title="AI Enhance"
                       >
                         <Sparkles className="w-4 h-4" />
@@ -1361,14 +1361,14 @@ export default function CodeGenerator() {
               <div className="grid grid-cols-3 gap-4">
                 <button 
                   onClick={() => copyToClipboard(generatedCode)}
-                  className="col-span-2 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-medium flex items-center justify-center gap-3"
+                  className="col-span-2 py-4 bg-linear-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white rounded-xl font-medium flex items-center justify-center gap-3"
                 >
                   <Copy className="w-5 h-5" />
                   {copied ? "Code Copied!" : "Copy Generated Code"}
                 </button>              
                 <button
                   onClick={handleDownload}
-                  className="py-4 bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-xl font-medium flex items-center justify-center gap-3"
+                  className="py-4 bg-linear-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white rounded-xl font-medium flex items-center justify-center gap-3"
                 >
                   <Download className="w-5 h-5" />
                   Download File
@@ -1379,14 +1379,14 @@ export default function CodeGenerator() {
         )}
 
         {/* Features Section */}
-        <div className="mt-12 bg-gradient-to-r from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-2xl p-8 border border-purple-100 dark:border-gray-700">
+        <div className="mt-12 bg-linear-to-r from-purple-50 to-blue-50 dark:from-gray-900 dark:to-gray-800 rounded-2xl p-8 border border-purple-100 dark:border-gray-700">
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             Complete AI Code Generator Features
           </h3>
           
           <div className="grid md:grid-cols-4 gap-6">
             <div className="text-center">
-              <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-pink-100 dark:from-purple-900 dark:to-pink-900 rounded-2xl flex items-center justify-center mx-auto mb-6">
+              <div className="w-16 h-16 bg-linear-to-br from-purple-100 to-pink-100 dark:from-purple-900 dark:to-pink-900 rounded-2xl flex items-center justify-center mx-auto mb-6">
                 <Brain className="w-8 h-8 text-purple-600 dark:text-purple-400" />
               </div>
               <h4 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
@@ -1488,7 +1488,7 @@ export default function CodeGenerator() {
 
         {/* Cost Estimation Banner */}
         {aiModeEnabled && (
-          <div className="mt-8 p-6 bg-gradient-to-r from-blue-900/20 to-purple-900/20 border border-blue-800/30 rounded-2xl">
+          <div className="mt-8 p-6 bg-linear-to-r from-blue-900/20 to-purple-900/20 border border-blue-800/30 rounded-2xl">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
