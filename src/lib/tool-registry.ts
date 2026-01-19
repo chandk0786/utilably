@@ -692,3 +692,17 @@ export function getToolBySlug(slug: string): Tool | undefined {
     (tool) => tool.id === slug || tool.path.split("/").pop() === slug
   );
 }
+
+// Backward-compatible helper used by tool-checker.ts
+export function updateToolStatus(toolId: string, updates: Partial<Tool>): Tool | null {
+  const index = toolRegistry.findIndex((tool) => tool.id === toolId);
+  if (index === -1) return null;
+
+  toolRegistry[index] = {
+    ...toolRegistry[index],
+    ...updates,
+    lastUpdated: new Date().toISOString(),
+  };
+
+  return toolRegistry[index];
+}
