@@ -1,5 +1,5 @@
 "use client";
-
+import RelatedTools from "@/components/RelatedTools";
 import { useState, useRef, useEffect } from "react";
 import {
   PDFDocument,
@@ -228,6 +228,7 @@ export default function PDFEditorPage() {
           </>
         )}
       </div>
+      <RelatedTools currentToolId="pdf-editor" />
     </ToolLayout>
   );
 }
