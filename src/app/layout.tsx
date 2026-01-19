@@ -7,7 +7,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "UtilityToolsHub - Free Online Tools & Calculators",
+  title: "Utilably - Free Online Tools & Calculators",
   description: "Free online tools for everyday tasks: PDF editors, converters, calculators, and more. No registration required.",
   keywords: "online tools, PDF converter, calculator, free tools, utility tools",
   authors: [{ name: "UtilityToolsHub" }],
