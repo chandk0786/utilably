@@ -1652,7 +1652,7 @@ export default function AudioConverter() {
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="audio-converter" />
     </ToolLayout>
   );
 }

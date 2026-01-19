@@ -732,7 +732,7 @@ export default function LoanCalculatorPage() {
           </div>
         </div>
       )}
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="loan-calculator" />
     </ToolLayout>
   );
 }

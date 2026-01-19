@@ -371,7 +371,7 @@ export default function PDFToWordPage() {
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="pdf-to-word" />
     </ToolLayout>
   );
 }

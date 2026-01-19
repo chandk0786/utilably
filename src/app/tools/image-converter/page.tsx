@@ -484,7 +484,7 @@ export default function ImageConverterPage() {
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="image-converter" />
     </ToolLayout>
   );
 }

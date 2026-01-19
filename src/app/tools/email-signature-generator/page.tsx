@@ -1147,7 +1147,7 @@ ${signatureData.includeDisclaimer ? '\nConfidentiality Notice: This email and an
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="email-signature-generator" />
     </ToolLayout>
   );
 }

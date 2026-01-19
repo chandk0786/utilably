@@ -642,7 +642,7 @@ export default function FileCompressor() {
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="file-compressor" />
     </ToolLayout>
   );
 }

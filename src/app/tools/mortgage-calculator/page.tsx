@@ -1009,7 +1009,7 @@ Exchange Rate: 1 USD = ${getExchangeRate().toFixed(4)} ${currency}
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="mortgage-calculator" />
     </ToolLayout>
   );
 }

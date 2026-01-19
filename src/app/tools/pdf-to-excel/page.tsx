@@ -1326,7 +1326,7 @@ const generateExcelFile = (tables: ExtractedTable[], format: OutputFormat): Blob
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="pdf-to-excel" />
     </ToolLayout>
   );
 }

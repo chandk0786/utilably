@@ -716,7 +716,7 @@ export default function RandomNumberGenerator() {
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="random-number-generator" />
     </ToolLayout>
   );
 }

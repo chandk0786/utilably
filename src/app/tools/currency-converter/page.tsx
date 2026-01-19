@@ -673,7 +673,7 @@ const sampleRates = {
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="currency-converter" />
 
     </ToolLayout>
   );

@@ -528,7 +528,7 @@ Latin America| $2,340,000  | $3,120,000  | +33.3%`;
           </ul>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="text-case-converter" />
     </ToolLayout>
   );
 }

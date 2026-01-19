@@ -449,7 +449,7 @@ export default function PasswordGeneratorPage() {
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="password-generator" />
     </ToolLayout>
   );
 }

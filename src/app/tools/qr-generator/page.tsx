@@ -434,7 +434,7 @@ export default function QRGeneratorPage() {
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="qr-generator" />
     </ToolLayout>
   );
 }

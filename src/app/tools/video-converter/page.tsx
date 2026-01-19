@@ -1523,7 +1523,7 @@ export default function VideoConverter() {
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="video-converter" />
     </ToolLayout>
   );
 }

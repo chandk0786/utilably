@@ -1511,7 +1511,7 @@ export default function CodeGenerator() {
           </div>
         )}
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="code-generator" />
     </ToolLayout>
   );
 }

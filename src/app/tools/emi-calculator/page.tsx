@@ -1143,7 +1143,7 @@ Interest to Principal Ratio: ${loanAmountUSD > 0 ? ((totalInterestUSD / loanAmou
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="emi-calculator" />
     </ToolLayout>
   );
 }

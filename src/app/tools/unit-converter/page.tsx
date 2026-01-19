@@ -612,7 +612,7 @@ export default function UnitConverter() {
           </div>
         </div>
       </div>
-      <RelatedTools currentToolId="TOOL_ID_HERE" />
+      <RelatedTools currentToolId="unit-converter" />
     </ToolLayout>
   );
 }
