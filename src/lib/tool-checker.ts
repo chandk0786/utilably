@@ -1,4 +1,5 @@
-import { Tool, toolRegistry, getOverallProgress, updateToolStatus } from './tool-registry';
+import { Tool, toolRegistry, getOverallProgress } from './tool-registry';
+
 
 export class ToolChecker {
   async checkAllTools(): Promise<{
