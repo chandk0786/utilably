@@ -1,11 +1,65 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { getToolBySlug } from "@/lib/tool-registry";
 
-export default function ToolPage({
-  params,
-}: {
+const SITE_URL = "https://utilably.com";
+
+type Props = {
   params: { toolName: string };
-}) {
+};
+
+function getCanonical(tool: any, toolName: string) {
+  const p = tool?.path ?? tool?.slug; // supports either
+  if (typeof p === "string" && p.startsWith("/")) return `${SITE_URL}${p}`;
+  return `${SITE_URL}/tools/${toolName}`;
+}
+
+export function generateMetadata({ params }: Props): Metadata {
+  const tool = getToolBySlug(params.toolName);
+
+  if (!tool) {
+    return {
+      title: "Tool not found | Utilably",
+      description: "The tool you are looking for does not exist on Utilably.",
+      robots: { index: false, follow: false },
+      alternates: { canonical: `${SITE_URL}/tools` },
+    };
+  }
+
+  const canonical = getCanonical(tool, params.toolName);
+
+  // Index only functional OR score >= 80
+  const isIndexable =
+    tool.status === "functional" || (tool.functionalityScore ?? 0) >= 80;
+
+  const title = tool.name ? `${tool.name} | Utilably` : "Utilably Tool";
+  const description =
+    tool.description?.trim() ||
+    "Free online tool on Utilably. Fast, secure, and easy to use.";
+
+  return {
+    title,
+    description,
+    alternates: { canonical },
+    robots: isIndexable
+      ? { index: true, follow: true }
+      : { index: false, follow: false },
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: "Utilably",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
+
+export default function ToolPage({ params }: Props) {
   const tool = getToolBySlug(params.toolName);
 
   if (!tool) {
@@ -24,18 +78,14 @@ export default function ToolPage({
 
   return (
     <div className="container mx-auto px-4 py-12">
-      <h1 className="text-3xl md:text-4xl font-bold mb-4">
-        {tool.name}
-      </h1>
+      <h1 className="text-3xl md:text-4xl font-bold mb-4">{tool.name}</h1>
 
       <p className="text-muted-foreground max-w-2xl mb-8">
         {tool.description}
       </p>
 
       <div className="rounded-xl border bg-card p-6">
-        <p className="text-muted-foreground">
-          This page is a wrapper route.
-        </p>
+        <p className="text-muted-foreground">This page is a wrapper route.</p>
         <p className="text-muted-foreground mt-2">
           The actual tool UI is implemented in:
         </p>
