@@ -4,14 +4,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://utilably.com";
 
   const routes = [
-    "",
+    "", // home
     "/tools",
+
+    // ✅ LIVE / FULLY FUNCTIONAL TOOLS ONLY
+    "/tools/pdf-editor",
+    "/tools/loan-calculator",
     "/tools/qr-generator",
     "/tools/password-generator",
     "/tools/currency-converter",
     "/tools/text-case-converter",
     "/tools/unit-converter",
-    "/tools/loan-calculator",
     "/tools/emi-calculator",
     "/tools/mortgage-calculator",
     "/tools/random-number-generator",
