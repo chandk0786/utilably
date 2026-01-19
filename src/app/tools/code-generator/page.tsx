@@ -1,5 +1,5 @@
 "use client";
-
+import RelatedTools from "@/components/RelatedTools";
 import { useState, useEffect } from "react";
 import ToolLayout from "@/components/ToolLayout";
 import {
@@ -1511,6 +1511,7 @@ export default function CodeGenerator() {
           </div>
         )}
       </div>
+      <RelatedTools currentToolId="TOOL_ID_HERE" />
     </ToolLayout>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import RelatedTools from "@/components/RelatedTools";
 import { useState, useEffect } from "react";
 import { 
   Key, 
@@ -871,6 +872,7 @@ export default function UUIDGenerator() {
           </div>
         </div>
       </div>
+      <RelatedTools currentToolId="TOOL_ID_HERE" />
     </ToolLayout>
   );
 }

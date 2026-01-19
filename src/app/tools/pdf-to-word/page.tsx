@@ -1,5 +1,6 @@
 "use client";
 
+import RelatedTools from "@/components/RelatedTools";
 import { FileText, Upload, Download, Check, Zap, Shield, Clock, FileType } from "lucide-react";
 import { useState } from "react";
 import ToolLayout from "@/components/ToolLayout";
@@ -370,6 +371,7 @@ export default function PDFToWordPage() {
           </div>
         </div>
       </div>
+      <RelatedTools currentToolId="TOOL_ID_HERE" />
     </ToolLayout>
   );
 }

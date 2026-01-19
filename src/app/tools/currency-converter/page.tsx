@@ -1,5 +1,5 @@
 "use client";
-
+import RelatedTools from "@/components/RelatedTools";
 import { Globe, RefreshCw, TrendingUp, Calculator, ArrowRightLeft, History, AlertCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import ToolLayout from "@/components/ToolLayout";
@@ -673,6 +673,8 @@ const sampleRates = {
           </div>
         </div>
       </div>
+      <RelatedTools currentToolId="TOOL_ID_HERE" />
+
     </ToolLayout>
   );
 }

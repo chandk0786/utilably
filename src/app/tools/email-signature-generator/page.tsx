@@ -1,5 +1,5 @@
 "use client";
-
+import RelatedTools from "@/components/RelatedTools";
 import { useState, useRef, useEffect } from "react";
 import { 
   Mail, 
@@ -1147,6 +1147,7 @@ ${signatureData.includeDisclaimer ? '\nConfidentiality Notice: This email and an
           </div>
         </div>
       </div>
+      <RelatedTools currentToolId="TOOL_ID_HERE" />
     </ToolLayout>
   );
 }

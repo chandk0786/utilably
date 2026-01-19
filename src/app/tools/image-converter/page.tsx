@@ -1,5 +1,6 @@
 "use client";
 
+import RelatedTools from "@/components/RelatedTools";
 import { Image, Upload, Download, RefreshCw, Zap, Check, FileImage } from "lucide-react";
 import { useState, useRef } from "react";
 import ToolLayout from "@/components/ToolLayout";
@@ -483,6 +484,7 @@ export default function ImageConverterPage() {
           </div>
         </div>
       </div>
+      <RelatedTools currentToolId="TOOL_ID_HERE" />
     </ToolLayout>
   );
 }

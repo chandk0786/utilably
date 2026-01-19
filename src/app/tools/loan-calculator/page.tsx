@@ -1,5 +1,6 @@
 "use client";
 
+import RelatedTools from "@/components/RelatedTools";
 import { Calculator, DollarSign, Percent, Calendar, TrendingUp, Globe, Download, Eye, Copy, Share2, Car, Home, GraduationCap, Briefcase } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import ToolLayout from "@/components/ToolLayout";
@@ -731,6 +732,7 @@ export default function LoanCalculatorPage() {
           </div>
         </div>
       )}
+      <RelatedTools currentToolId="TOOL_ID_HERE" />
     </ToolLayout>
   );
 }

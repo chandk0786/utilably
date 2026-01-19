@@ -1,5 +1,6 @@
 "use client";
 
+import RelatedTools from "@/components/RelatedTools";
 import { QrCode, Download, Copy, RefreshCw, Link, MessageSquare, Wifi, Phone, Image } from "lucide-react";
 import { useState, useRef, useEffect } from "react";
 import ToolLayout from "@/components/ToolLayout";
@@ -433,6 +434,7 @@ export default function QRGeneratorPage() {
           </div>
         </div>
       </div>
+      <RelatedTools currentToolId="TOOL_ID_HERE" />
     </ToolLayout>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import RelatedTools from "@/components/RelatedTools";
 import { useState, useMemo } from "react";
 import { 
   Type, 
@@ -527,6 +528,7 @@ Latin America| $2,340,000  | $3,120,000  | +33.3%`;
           </ul>
         </div>
       </div>
+      <RelatedTools currentToolId="TOOL_ID_HERE" />
     </ToolLayout>
   );
 }

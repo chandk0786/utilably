@@ -1,5 +1,6 @@
 "use client";
 
+import RelatedTools from "@/components/RelatedTools";
 import { useState, useEffect, useMemo } from "react";
 import { 
   Ruler, 
@@ -611,6 +612,7 @@ export default function UnitConverter() {
           </div>
         </div>
       </div>
+      <RelatedTools currentToolId="TOOL_ID_HERE" />
     </ToolLayout>
   );
 }

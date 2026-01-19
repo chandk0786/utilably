@@ -1,5 +1,6 @@
 "use client";
 
+import RelatedTools from "@/components/RelatedTools";
 import { Lock, Copy, RefreshCw, Check, Shield, Zap, Key, AlertCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import ToolLayout from "@/components/ToolLayout";
@@ -448,6 +449,7 @@ export default function PasswordGeneratorPage() {
           </div>
         </div>
       </div>
+      <RelatedTools currentToolId="TOOL_ID_HERE" />
     </ToolLayout>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import RelatedTools from "@/components/RelatedTools";
 import { useState, useRef, useEffect } from "react";
 import ToolLayout from "@/components/ToolLayout";
 import { 
@@ -1325,6 +1326,7 @@ const generateExcelFile = (tables: ExtractedTable[], format: OutputFormat): Blob
           </div>
         </div>
       </div>
+      <RelatedTools currentToolId="TOOL_ID_HERE" />
     </ToolLayout>
   );
 }
