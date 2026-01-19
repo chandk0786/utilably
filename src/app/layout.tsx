@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: "Utilably - Free Online Tools & Calculators",
   description: "Free online tools for everyday tasks: PDF editors, converters, calculators, and more. No registration required.",
   keywords: "online tools, PDF converter, calculator, free tools, utility tools",
-  authors: [{ name: "UtilityToolsHub" }],
+  authors: [{ name: "Utilably" }],
   robots: "index, follow",
 };
 
